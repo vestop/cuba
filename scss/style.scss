@@ -1,0 +1,331 @@
+@import "libs";
+@import "global";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+.header__top {
+  background-image: url(../images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 40px;
+}
+
+.header__top-inner {
+  border: 2px solid $orange;
+  border-bottom: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Georgia", sans-serif;
+}
+
+.header__title {
+  font-size: 200px;
+  line-height: 227px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  margin: auto;
+}
+
+.header__text {
+  font-size: 24px;
+  line-height: 27px;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-bottom: -12px;
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $orange;
+  }
+  &::before {
+    margin-right: 30px;
+  }
+  &::after {
+    margin-left: 30px;
+  }
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.menu__list-item {
+  padding: 0 10px 20px;
+  font-weight: bold;
+  color: #909090;
+  font-size: 14px;
+  line-height: 19px;
+  margin: 24px 6px 0;
+  border-bottom: 4px solid transparent;
+  transition: all 0.5s;
+  cursor: pointer;
+  &.menu--active {
+    border-bottom: 4px solid $orange;
+    color: #4e5665;
+  }
+  &:hover {
+    border-bottom: 4px solid $orange;
+  }
+}
+.resume {
+  padding-top: 80px;
+}
+.resume__title {
+  margin-bottom: 22px;
+}
+.resume__statistics {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 64px;
+  text-align: center;
+  padding-bottom: 80px;
+}
+.resume__link {
+  text-align: right;
+  color: $orange;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.resume__item-num {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-top: 32px;
+}
+.resume__item-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #909090;
+  margin-top: 1px;
+}
+.about {
+  padding-top: 80px;
+}
+.about__title {
+  margin-bottom: 13px;
+}
+.about__text {
+  margin-bottom: 72px;
+}
+
+.about__item {
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+
+  &:nth-child(even) {
+    background-position: left;
+    justify-content: flex-end;
+    margin-top: 100px;
+    & .about__item-box {
+      &::after {
+        bottom: 20px;
+        right: auto;
+        left: 20px;
+        border-bottom: 2px solid $orange;
+        border-right: 0;
+        border-left: 2px solid $orange;
+      }
+      &::before {
+        top: 20px;
+        left: auto;
+        right: 20px;
+        position: absolute;
+        border-top: 2px solid $orange;
+        border-left: none;
+        border-right: 2px solid $orange;
+      }
+    }
+  }
+}
+
+.about__item-box {
+  background-color: #fff;
+  filter: drop-shadow(2px 2px 4px hsla(0deg, 0%, 0%, 0.5));
+  width: 470px;
+  position: relative;
+  padding: 33px 40px 40px;
+  &::after {
+    display: block;
+    content: "";
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-bottom: 2px solid $orange;
+    border-right: 2px solid $orange;
+  }
+  &::before {
+    display: block;
+    content: "";
+    width: 33px;
+    height: 33px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    border-top: 2px solid $orange;
+    border-left: 2px solid $orange;
+  }
+}
+.about__item-title {
+  font-family: "Georgia", sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+}
+.about__item-text {
+  margin-top: 20px;
+}
+
+.information {
+  margin-top: 120px;
+}
+.information__title {
+  margin-bottom: 112px;
+}
+.information__inner {
+  background-image: url(../images/cadillac.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 330px;
+}
+.information__text {
+  padding: 53px 0 80px;
+}
+.previews {
+  padding: 80px 0;
+}
+.previews__title {
+  margin-bottom: 42px;
+}
+.previews__text {
+  padding-bottom: 49px;
+  margin-bottom: 56px;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #d0d4d8;
+    width: 270px;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+}
+.preview__slider {
+  max-width: 650px;
+  margin: 0 auto;
+  filter: drop-shadow(2px 4px 4px hsla(0deg, 0%, 0%, 0.5));
+  position: relative;
+  & .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    z-index: 2;
+    background-color: $orange;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 0;
+    filter: drop-shadow(2px 2px 2px hsla(0deg, 0%, 0%, 0.5));
+  }
+  & .arrow-right {
+    left: auto;
+    right: -20px;
+  }
+}
+.preview__image {
+  border-radius: 4px;
+}
+.footer {
+  background-color: #f8f8f8;
+  border-top: 1px solid #d0d4d875;
+  padding: 55px 0 32px;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__item {
+  width: 132px;
+}
+.footer__company {
+  width: 113px;
+  margin-left: 110px;
+}
+.footer__blog {
+  width: 310px;
+}
+.footer__item-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  color: #4e5665;
+}
+.footer__list-item {
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 8px;
+}
+
+.footer__link {
+  position: relative;
+  padding-left: 28px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 1px;
+  }
+}
+.footer__message::before {
+  background-image: url(../images/interface.svg);
+  width: 17px;
+}
+.footer__facebook::before {
+  background-image: url(../images/facebook-logo.svg);
+}
+.footer__instagram::before {
+  background-image: url(../images/instagram-logo.svg);
+}
+.footer__youtube::before {
+  background-image: url(../images/youtube-symbol.svg);
+}
+.footer__email::before {
+  background-image: url(../images/email-symbol.svg);
+  height: 13px;
+  top: 3px;
+}
+
+.footer__copy {
+  text-align: center;
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 40px;
+}

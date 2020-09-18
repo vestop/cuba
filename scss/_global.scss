@@ -1,0 +1,37 @@
+$orange: #ecb84c;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  color: #505050;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Lato", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.content-col {
+  max-width: 970px;
+  margin: 0 auto;
+}
+.section-line {
+  border-bottom: 1px solid #d0d4d875;
+}
+
+.title {
+  font-family: Georgia;
+  font-size: 32px;
+  line-height: 38px;
+  color: #4e5665;
+  text-align: center;
+}
